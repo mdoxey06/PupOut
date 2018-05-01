@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class HomeScreen extends AppCompatActivity {
+public class EditProfile extends AppCompatActivity {
 
     private TextView mTextMessage;
 
@@ -20,11 +20,11 @@ public class HomeScreen extends AppCompatActivity {
                 case R.id.navigation_home:
                     mTextMessage.setText(R.string.title_home);
                     return true;
-                case R.id.navigation_matches:
-                    mTextMessage.setText(R.string.title_matches);
+                case R.id.navigation_dashboard:
+                    mTextMessage.setText(R.string.title_dashboard);
                     return true;
-                case R.id.navigation_redeem:
-                    mTextMessage.setText(R.string.title_redeem);
+                case R.id.navigation_notifications:
+                    mTextMessage.setText(R.string.title_notifications);
                     return true;
             }
             return false;
@@ -34,7 +34,7 @@ public class HomeScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_screen);
+        setContentView(R.layout.activity_edit_profile);
 
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
