@@ -4,27 +4,33 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
+import android.content.Intent;
+import android.content.Context;
+
 
 public class Matches extends AppCompatActivity {
-
-    private TextView mTextMessage;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            Context currContext = Matches.this;
+
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
+                    Intent intent1 = new Intent(currContext, HomeScreen.class);
+                    currContext.startActivity(intent1);
                     return true;
                 case R.id.navigation_matches:
-                    mTextMessage.setText(R.string.title_matches);
+//                    Intent intent2 = new Intent(currContext, Matches.class);
+//                    currContext.startActivity(intent2);
                     return true;
                 case R.id.navigation_redeem:
-                    mTextMessage.setText(R.string.title_redeem);
+                    Intent intent3 = new Intent(currContext, Redeem.class);
+                    currContext.startActivity(intent3);
                     return true;
             }
             return false;
@@ -36,9 +42,30 @@ public class Matches extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_matches);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        navigation.getMenu().findItem(R.id.navigation_matches).setChecked(true);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.settings_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.edit_profile:
+                Intent intent1 = new Intent(this, EditProfile.class);
+                this.startActivity(intent1);
+                break;
+            case R.id.edit_filters:
+                Intent intent2 = new Intent(this, MatchFilters.class);
+                this.startActivity(intent2);
+                break;
+        }
+
+        return true;
+    }
 }
