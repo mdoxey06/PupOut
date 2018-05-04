@@ -29,7 +29,7 @@ public class Matches extends AppCompatActivity {
 //                    currContext.startActivity(intent2);
                     return true;
                 case R.id.navigation_redeem:
-                    Intent intent3 = new Intent(currContext, Redeem.class);
+                    Intent intent3 = new Intent(currContext, ExchangeScreen.class);
                     currContext.startActivity(intent3);
                     return true;
             }

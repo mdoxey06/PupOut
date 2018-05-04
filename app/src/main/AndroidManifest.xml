@@ -39,7 +39,10 @@
         <activity
             android:name=".MatchFilters"
             android:label="@string/title_activity_match_filters" />
-        <activity android:name=".WelcomePage"></activity>
+        <activity android:name=".WelcomePage" />
+        <activity
+            android:name=".ExchangeScreen"
+            android:label="@string/title_activity_exchange_screen"></activity>
     </application>
 
 </manifest>

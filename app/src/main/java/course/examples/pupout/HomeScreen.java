@@ -29,7 +29,7 @@ public class HomeScreen extends AppCompatActivity {
                     currContext.startActivity(intent2);
                     return true;
                 case R.id.navigation_redeem:
-                    Intent intent3 = new Intent(currContext, Redeem.class);
+                    Intent intent3 = new Intent(currContext, ExchangeScreen.class);
                     currContext.startActivity(intent3);
                     return true;
             }
@@ -41,6 +41,7 @@ public class HomeScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+//        System.out.println("LOADED HOME SCREEN");
 
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);

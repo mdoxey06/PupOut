@@ -23,4 +23,5 @@
     <string name="title_activity_redeem">Redeem</string>
     <string name="title_activity_edit_profile">EditProfile</string>
     <string name="title_activity_match_filters">MatchFilters</string>
+    <string name="title_activity_exchange_screen">ExchangeScreen</string>
 </resources>
