@@ -6,6 +6,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.content.Intent;
 import android.content.Context;
 
@@ -66,5 +67,9 @@ public class EditProfile extends AppCompatActivity {
         }
 
         return true;
+    }
+
+    public void saveEdit(View view) {
+        this.finish();
     }
 }

@@ -16,7 +16,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".HomeScreen"
-            android:label="@string/app_name">
+            android:label="Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,21 +28,24 @@
             android:label="@string/title_activity_login" />
         <activity
             android:name=".Matches"
-            android:label="@string/title_activity_matches" />
+            android:label="Matches" />
         <activity
             android:name=".Redeem"
-            android:label="@string/title_activity_redeem" />
+            android:label="Redeem Points" />
         <activity android:name=".SignUp" />
         <activity
             android:name=".EditProfile"
-            android:label="@string/title_activity_edit_profile" />
+            android:label="Edit Profile" />
         <activity
             android:name=".MatchFilters"
-            android:label="@string/title_activity_match_filters" />
+            android:label="Edit Filters" />
         <activity android:name=".WelcomePage" />
         <activity
             android:name=".ExchangeScreen"
-            android:label="@string/title_activity_exchange_screen"></activity>
+            android:label="Redeem Points" />
+        <activity
+            android:name=".Redeem2"
+            android:label="Points Redeemed!"></activity>
     </application>
 
 </manifest>

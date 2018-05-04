@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
 import android.content.Context;
+import android.view.View;
+import android.widget.Button;
 
 
 public class Redeem extends AppCompatActivity {
@@ -29,43 +31,35 @@ public class Redeem extends AppCompatActivity {
                     currContext.startActivity(intent2);
                     return true;
                 case R.id.navigation_redeem:
-//                    Intent intent3 = new Intent(currContext, Redeem.class);
-//                    currContext.startActivity(intent3);
+                    Intent intent3 = new Intent(currContext, Redeem.class);
+                    currContext.startActivity(intent3);
                     return true;
             }
             return false;
         }
     };
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_redeem);
+
+        Button redeem = findViewById(R.id.redeem_button);
+        redeem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Context currContext = Redeem.this;
+                Intent intent1 = new Intent(currContext, Redeem2.class);
+                currContext.startActivity(intent1);
+            }
+        });
 
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         navigation.getMenu().findItem(R.id.navigation_redeem).setChecked(true);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.settings_menu, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.edit_profile:
-                Intent intent1 = new Intent(this, EditProfile.class);
-                this.startActivity(intent1);
-                break;
-            case R.id.edit_filters:
-                Intent intent2 = new Intent(this, MatchFilters.class);
-                this.startActivity(intent2);
-                break;
-        }
-
-        return true;
-    }
 }

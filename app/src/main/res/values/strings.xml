@@ -24,4 +24,10 @@
     <string name="title_activity_edit_profile">EditProfile</string>
     <string name="title_activity_match_filters">MatchFilters</string>
     <string name="title_activity_exchange_screen">ExchangeScreen</string>
+
+    <string-array name="genders">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string name="title_activity_redeem2">Redeem2</string>
 </resources>

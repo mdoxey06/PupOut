@@ -1,25 +1,24 @@
 package course.examples.pupout;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.GridLayout;
 import android.widget.TextView;
+import android.content.Context;
+import android.content.Intent;
 
-public class ExchangeScreen extends AppCompatActivity {
+public class Redeem2 extends AppCompatActivity {
+
+    private TextView mTextMessage;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Context currContext = ExchangeScreen.this;
+            Context currContext = Redeem2.this;
 
             switch (item.getItemId()) {
                 case R.id.navigation_home:
@@ -31,40 +30,22 @@ public class ExchangeScreen extends AppCompatActivity {
                     currContext.startActivity(intent2);
                     return true;
                 case R.id.navigation_redeem:
-//                    Intent intent3 = new Intent(currContext, ExchangeScreen.class);
-//                    currContext.startActivity(intent3);
+                    Intent intent3 = new Intent(currContext, Redeem.class);
+                    currContext.startActivity(intent3);
                     return true;
             }
             return false;
         }
     };
 
-    private void setSingleEvent(GridLayout mainGrid) {
-        for (int i = 0; i<mainGrid.getChildCount();i++) {
-            CardView cardView = (CardView)mainGrid.getChildAt(i);
-            final int count = i;
-            cardView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) { //open tennis ball
-                    if (count == 0) {
-                        Intent intent = new Intent(ExchangeScreen.this,Redeem.class);
-                        startActivity(intent);
-                    }
-                }
-            });
-        }
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_exchange_screen);
+        setContentView(R.layout.activity_redeem2);
 
-        GridLayout mainGrid = findViewById(R.id.mainGrid);
-        setSingleEvent(mainGrid);
-
-        BottomNavigationView navigation = findViewById(R.id.navigation);
+        mTextMessage = (TextView) findViewById(R.id.message);
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        navigation.setSelectedItemId(navigation.getSelectedItemId());
     }
+
 }
