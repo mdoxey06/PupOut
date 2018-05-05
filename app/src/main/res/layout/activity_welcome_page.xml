@@ -6,12 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".WelcomePage">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="It worked!"
-        tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="154dp"
-        tools:ignore="MissingConstraints" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="198dp"
+            android:layout_height="51dp"
+            android:text="Welcome To"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/pupout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PUPOUT"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:layout_below="@+id/welcome"
+            android:layout_centerHorizontal="true"
+            tools:ignore="MissingConstraints,UnknownId" />
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="155dp"
+            android:layout_height="96dp"
+            android:layout_below="@+id/pupout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:text="Log In"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/signup_button"
+            android:layout_width="155dp"
+            android:layout_height="96dp"
+            android:layout_below="@+id/login_button"
+            android:layout_centerHorizontal="true"
+            android:text="Sign up"
+            tools:ignore="MissingConstraints" />
+
+    </RelativeLayout>
+
 </android.support.constraint.ConstraintLayout>

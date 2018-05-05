@@ -30,4 +30,10 @@
         <item>Female</item>
     </string-array>
     <string name="title_activity_redeem2">Redeem2</string>
+    <string name="title_activity_welcome_page">WelcomePage</string>
+    <string name="title_activity_initial_sign_up">InitialSignUp</string>
+    <string name="title_activity_second_sign_up">SecondSignUp</string>
+    <string name="title_activity_third_sign_up">ThirdSignUp</string>
+    <string name="title_activity_fourth_sign_up">FourthSignUp</string>
+    <string name="title_activity_completed">Completed</string>
 </resources>

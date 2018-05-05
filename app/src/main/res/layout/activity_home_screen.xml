@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeScreen"
+    android:background="#F0F0E1"
     tools:layout_editor_absoluteY="73dp">
 
     <android.support.design.widget.BottomNavigationView
@@ -127,7 +128,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="false"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="10dp"
             android:text="Recent Dates"
             android:textColor="@android:color/black"
             android:textSize="30sp"

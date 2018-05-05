@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondSignUp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/greeting"
+            android:layout_width="325dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:inputType="textMultiLine"
+            android:text="Hello Jack!\nCould you please tell\nus more about yourself!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:layout_marginTop="30dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/greeting"
+            android:text="Age:"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="40dp"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            tools:ignore="MissingConstraints" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/age"
+            android:layout_below="@+id/greeting"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="-130dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="age" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/age"
+            android:text="Gender:"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="40dp"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            tools:ignore="MissingConstraints" />
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="177dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/age"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/gender"
+            android:text="City:"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="40dp"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            tools:ignore="MissingConstraints" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/area"
+            android:layout_below="@+id/gender"
+            android:layout_marginRight="-115dp"
+            android:layout_marginTop="7dp"
+            android:layout_toEndOf="@+id/gender">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="city name"
+                android:ems="15"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="155dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/area"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:text="Next"
+            tools:ignore="MissingConstraints" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

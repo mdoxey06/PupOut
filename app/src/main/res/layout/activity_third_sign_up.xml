@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThirdSignUp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/greeting"
+            android:layout_width="325dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
+            android:inputType="textMultiLine"
+            android:text="Great!\nNow could you tell\nus your dogs name?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            tools:ignore="MissingConstraints" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/namefield"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="230dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="155dp"
+            android:layout_height="70dp"
+            android:text="Next"
+            android:layout_below="@+id/namefield"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            tools:ignore="MissingConstraints" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
