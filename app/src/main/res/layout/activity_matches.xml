@@ -5,29 +5,301 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Matches">
+    tools:context=".Matches"
+    android:background="#F0F0E1"
+    tools:layout_editor_absoluteY="81dp">
 
-    <TextView
-        android:id="@+id/message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:text="@string/title_home"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="0dp"
-        android:layout_marginStart="0dp"
         android:background="?android:attr/windowBackground"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/navigation" />
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="353dp"
+        android:layout_height="wrap_content"
+        android:text="Meet your Matches"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Meet your Matches" />
+
+
+    <RelativeLayout
+        android:layout_width="356dp"
+        android:layout_height="104dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.242">
+
+
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="97dp"
+            android:layout_height="94dp"
+            app:srcCompat="@drawable/allison"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            tools:ignore="MissingConstraints" />
+
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/imageView5"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/imageView5"
+            android:isIndicator="true"
+            android:maxHeight="25dp"
+            android:maxWidth="100dp"
+            android:numStars="5"
+            android:rating="4"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:stepSize="0.5"
+            android:theme="@style/RatingBar" />
+
+        <TextView
+            android:id="@+id/points"
+            android:layout_width="174dp"
+            android:layout_height="85dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/rating_bar"
+            android:layout_marginEnd="67dp"
+            android:text="Hi! My name is Allison and I have two dogs :) "
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@android:style/Widget.Material.Light.Button.Inset"
+            android:layout_width="50dp"
+            android:layout_height="27dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/holo_green_light"
+            android:text=":)" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@android:style/Widget.Material.Light.Button.Inset"
+            android:layout_width="50dp"
+            android:layout_height="27dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/holo_red_dark"
+            android:text=":(" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="356dp"
+        android:layout_height="104dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.550">
+
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="97dp"
+            android:layout_height="94dp"
+            app:srcCompat="@drawable/matt"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            tools:ignore="MissingConstraints" />
+        <RatingBar
+            android:id="@+id/rating_bar2"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/imageView3"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/imageView3"
+            android:isIndicator="true"
+            android:maxHeight="25dp"
+            android:maxWidth="100dp"
+            android:numStars="5"
+            android:rating="3.5"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:stepSize="0.5"
+            android:theme="@style/RatingBar" />
+        <TextView
+            android:id="@+id/points2"
+            android:layout_width="174dp"
+            android:layout_height="85dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/rating_bar2"
+            android:layout_marginEnd="67dp"
+            android:text="My name is Matt and I have one dog and he loves playing fetch "
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button4"
+            style="@android:style/Widget.Material.Light.Button.Inset"
+            android:layout_width="50dp"
+            android:layout_height="27dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/holo_green_light"
+            android:text=":)" />
+
+        <Button
+            android:id="@+id/button5"
+            style="@android:style/Widget.Material.Light.Button.Inset"
+            android:layout_width="50dp"
+            android:layout_height="27dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/holo_red_dark"
+            android:text=":(" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="356dp"
+        android:layout_height="104dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.860">
+
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="97dp"
+            android:layout_height="94dp"
+            app:srcCompat="@drawable/sydney"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            tools:ignore="MissingConstraints" />
+        <RatingBar
+            android:id="@+id/rating_bar3"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/imageView4"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/imageView4"
+            android:isIndicator="true"
+            android:maxHeight="25dp"
+            android:maxWidth="100dp"
+            android:numStars="5"
+            android:rating="4.5"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:stepSize="0.5"
+            android:theme="@style/RatingBar" />
+        <TextView
+            android:id="@+id/points3"
+            android:layout_width="174dp"
+            android:layout_height="85dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/rating_bar3"
+            android:layout_marginEnd="67dp"
+            android:text="Hey! I go by Sydney and I love dogs and she loves to go on long walks. "
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/button6"
+            style="@android:style/Widget.Material.Light.Button.Inset"
+            android:layout_width="50dp"
+            android:layout_height="27dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/holo_green_light"
+            android:text=":)" />
+
+        <Button
+            android:id="@+id/button7"
+            style="@android:style/Widget.Material.Light.Button.Inset"
+            android:layout_width="50dp"
+            android:layout_height="27dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/holo_red_dark"
+            android:text=":(" />
+
+    </RelativeLayout>
+
+
+
+
+
+    <ScrollView
+        android:layout_height="495dp"
+        android:scrollbarStyle="insideOverlay"
+        android:visibility="visible"
+        tools:layout_editor_absoluteY="8dp"
+        android:layout_width="495dp"
+        tools:ignore="MissingConstraints" />
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints" />
+
+
+
+    <android.support.constraint.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
 
 </android.support.constraint.ConstraintLayout>
