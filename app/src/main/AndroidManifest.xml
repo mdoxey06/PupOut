@@ -63,6 +63,10 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name" />
+        <activity
+            android:name=".DogPref"
+            android:label="@string/title_activity_dog_pref"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

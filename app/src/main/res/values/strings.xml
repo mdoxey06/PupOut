@@ -36,4 +36,15 @@
     <string name="title_activity_third_sign_up">ThirdSignUp</string>
     <string name="title_activity_fourth_sign_up">FourthSignUp</string>
     <string name="title_activity_completed">Completed</string>
+    <string name="title_activity_dog_pref">DogPref</string>
+    <string-array name="dogNames">
+        <item>Lucky</item>
+    </string-array>
+    <string-array name="dogBreeds">
+        <item>German Shepherd</item>
+        <item>Labrador Retriever</item>
+        <item>Beagle</item>
+        <item>Poodle</item>
+        <item>Cavalier</item>
+    </string-array>
 </resources>

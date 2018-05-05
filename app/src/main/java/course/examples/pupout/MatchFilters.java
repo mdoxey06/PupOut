@@ -8,13 +8,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
 import android.content.Context;
+import android.view.View;
 
 
 public class MatchFilters extends AppCompatActivity {
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Context currContext = MatchFilters.this;
@@ -25,8 +25,8 @@ public class MatchFilters extends AppCompatActivity {
                     currContext.startActivity(intent1);
                     return true;
                 case R.id.navigation_matches:
-//                    Intent intent2 = new Intent(currContext, Matches.class);
-//                    currContext.startActivity(intent2);
+                    Intent intent2 = new Intent(currContext, Matches.class);
+                    currContext.startActivity(intent2);
                     return true;
                 case R.id.navigation_redeem:
                     Intent intent3 = new Intent(currContext, ExchangeScreen.class);
@@ -64,7 +64,11 @@ public class MatchFilters extends AppCompatActivity {
                 this.startActivity(intent2);
                 break;
         }
-
         return true;
+    }
+
+    public void onClick(View view) {
+        Intent intent = new Intent(this, DogPref.class);
+        this.startActivity(intent);
     }
 }

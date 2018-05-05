@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DogPref"
+    android:background="#daf8f5">
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/actpref"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:enabled="true"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:text="Activity Preferences"
+            android:textAppearance="@android:style/TextAppearance.Widget.TabWidget"
+            android:textColor="@android:color/white"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:onClick="onClick"/>
+
+        <Button
+            android:id="@+id/dogpref"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:clickable="false"
+            android:focusable="false"
+            android:enabled="false"
+            android:text="Dog Preferences"
+            android:textAppearance="@android:style/TextAppearance.Widget.TabWidget"
+            android:textColor="@android:color/white"
+            android:layout_alignTop="@id/actpref"
+            android:layout_toRightOf="@id/actpref"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/whichDog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Which dog(s) would you like to bring?"
+            android:layout_below="@id/actpref"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/black"
+            />
+
+        <Spinner
+            android:id="@+id/dogs"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/black"
+            android:entries="@array/dogNames"
+            android:layout_below="@id/whichDog"
+            android:layout_marginTop="5dp"
+            android:layout_alignLeft="@id/whichDog"/>
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How many dogs would you like to meet?"
+            android:textColor="@android:color/black"
+            android:layout_below="@id/dogs"
+            android:layout_marginTop="10dp"
+            android:layout_alignLeft="@id/whichDog"/>
+
+        <RadioGroup
+            android:id="@+id/numberDog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/nopref"
+            android:layout_below="@id/amount"
+            android:layout_alignLeft="@id/whichDog">
+
+            <RadioButton
+                android:id="@+id/nopref"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No preference" />
+
+            <RadioButton
+                android:id="@+id/one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 Dog" />
+
+            <RadioButton
+                android:id="@+id/two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 Dogs" />
+
+            <RadioButton
+                android:id="@+id/three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3 Dogs" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What size dog(s) would you like to meet?"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/numberDog"
+            android:layout_alignLeft="@id/whichDog"/>
+
+        <CheckBox
+            android:id="@+id/noPref"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Preference"
+            android:layout_below="@id/size"
+            android:layout_alignLeft="@id/whichDog"/>
+
+        <CheckBox
+            android:id="@+id/small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Small"
+            android:layout_below="@id/noPref"
+            android:layout_alignLeft="@id/whichDog"/>
+
+        <CheckBox
+            android:id="@+id/med"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium"
+            android:layout_below="@id/small"
+            android:layout_alignLeft="@id/whichDog"/>
+
+        <CheckBox
+            android:id="@+id/large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Large"
+            android:layout_below="@id/med"
+            android:layout_alignLeft="@id/whichDog"/>
+
+        <TextView
+            android:id="@+id/breed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Which breed(s) would you like to meet?"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/large"
+            android:layout_alignLeft="@id/whichDog"
+            />
+
+        <Spinner
+            android:id="@+id/breeds"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/black"
+            android:entries="@array/dogBreeds"
+            android:layout_below="@id/breed"
+            android:layout_alignLeft="@id/whichDog"
+            android:layout_marginTop="5dp"/>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
